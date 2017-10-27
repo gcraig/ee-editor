@@ -41,11 +41,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\buffer.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
+    <Text Include="Notes.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Notes.txt" />
+    <ClInclude Include="..\src\buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

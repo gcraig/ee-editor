@@ -29,6 +29,16 @@
 // 
 //} Buffer;
 
+
+//typedef struct node
+//{
+//	...
+
+//} Node;
+
+// typedef struct node Node;
+
+
 /*
 	wchar_t *buf = buffer_init();
 	buf[0] = L'G';
