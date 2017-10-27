@@ -13,18 +13,42 @@ buffer_create ()
 	{
 		fprintf(stderr, "malloc buffer failed.\n");
 		exit(-1);
-		return(NULL); // TODO: remove system exit
+		//return(NULL); // TODO: remove system exit
 	}
-	strcpy(buf->name, "testfile.txt");
+	strcpy_s(buf->name, 20, "testfile.txt");
 
 	
-	Node *head = malloc(sizeof(struct node));
-	wcscpy(head->line, L"Lorem Ipsom Epsom Dualai");
-	buf->head = head;
+	Node *_head = malloc(sizeof(struct node));
+	wchar_t *_line = L"Lorem Ipsom Epsom Dualai";
+	if (_head == NULL)
+	{
+		fprintf(stderr, "malloc head node failed.\n");
+		exit(-1);
+		//return(NULL); // TODO: remove system exit
+	}
+	//wcscpy_s(head->line, L"Lorem Ipsom Epsom Dualai");
+	buf->head = _head;
+	_head->line = _line;
 	
+	wprintf(L"%ls\n", _head->line);
 	printf("Buffer successfully created.\n");
-	printf("Buffer size: %d\n", sizeof (struct buffer));
+	//printf("Buffer size: %d\n", (int) (sizeof (struct buffer)));
     return buf;
+}
+
+extern void 
+buffer_save(Buffer *buf, const char *filename) 
+{
+	FILE *fout = fopen(filename, "w");
+	if (fout == NULL)
+	{
+		fprintf(stderr, "Error in openinng buffer file to save: %s", filename);
+		exit(-1);
+	}
+	size_t s = fwrite(buf->head->line, sizeof(buf->head->line), 1, fout);
+	fflush(fout);
+	fclose(fout);
+	return;
 }
 
 extern void
@@ -62,6 +86,7 @@ buffer_print(Buffer *buf)
 //    }    
 
     printf("\n");
+	return;
 }
 
 extern void
@@ -73,6 +98,7 @@ buffer_free(Buffer *buf)
 //  free(buffer->head);
 //  free(buffer->tail);
     free(buf);
+	return;
 }
 
 // old
