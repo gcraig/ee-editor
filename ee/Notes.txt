@@ -1,0 +1,46 @@
+ // Code Snippets
+
+/*
+// typdef struct buffer
+// {
+//    NODE            *tail;      /* last line */
+//    int             dirty;      /* buffer changed and not saved */
+//    int             datetime;   /* date/time modified */
+//    long            len;        /* total buffer/file size */
+//    size_t          numlines;   /* number of lines in buffer/file */
+//    struct node* head;       /* first line */
+//    wchar_t**    lines;      /* data */
+//    long         init_size;  /* page size */
+//
+// } Buffer;
+
+//typedef struct buffer 
+//{
+//    char*           name;       /* buffer/file name */
+//    NODE            *head;      /* first line */
+//    NODE            *tail;      /* last line */
+//    int             dirty;      /* buffer changed and not saved */
+//    int             datetime;   /* date/time modified */
+//    long            len;        /* total buffer/file size */
+//    long            numlines;   /* number of lines in buffer/file */
+//    //struct node* head;       /* first line */
+//    //wchar_t**    lines;      /* data */
+//    //long         init_size;  /* page size */
+// 
+//} Buffer;
+
+/*
+	wchar_t *buf = buffer_init();
+	buf[0] = L'G';
+	buf[1] = L'C';    
+	buffer_print(buf);
+	buffer_free(buf);
+*/
+    
+//    buf[0] = L'G';
+//    buf[1] = L'C';
+//    buf[2] = NULL;
+//    buf = &buf[0];
+//    printf("data:");
+
+*/

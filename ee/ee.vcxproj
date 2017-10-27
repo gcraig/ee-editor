@@ -18,6 +18,22 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\buffer.c" />
+    <ClCompile Include="..\src\config.c" />
+    <ClCompile Include="..\src\editor.c" />
+    <ClCompile Include="..\src\fileio.c" />
+    <ClCompile Include="..\src\keys.c" />
+    <ClCompile Include="..\src\main.c" />
+    <ClCompile Include="..\src\token.c" />
+    <ClCompile Include="..\src\view.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\buffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Notes.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{6DD0C98B-7C34-4FAA-9B4C-88FCB3191FB5}</ProjectGuid>
@@ -86,7 +102,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -138,8 +154,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
