@@ -89,6 +89,12 @@ buffer_print(Buffer *buf)
 	return;
 }
 
+extern void		
+buffer_read(const char *filename)
+{
+
+}
+
 extern void
 //buffer_free(wchar_t* buf)
 //buffer_free(BUFFER* buffer)

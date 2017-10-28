@@ -39,9 +39,10 @@
 	// strcpy(newBuffer->name, "testbuffer.txt");
 
 	extern Buffer * buffer_create();
-	extern void		buffer_print(Buffer *buffer);
+	extern void		buffer_print(Buffer *buf);
+	extern void		buffer_read(const char *filename);
 	extern void		buffer_save(Buffer *buf, const char *filename);
-	extern void		buffer_free(Buffer *buffer);
+	extern void		buffer_free(Buffer *buf);
 
 #ifdef __cplusplus
 }
